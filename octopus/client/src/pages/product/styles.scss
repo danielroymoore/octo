@@ -1,0 +1,121 @@
+.product {
+  padding-top: 4em;
+
+  &__container {
+    padding: 2.1em;
+
+    &--dark-blue {
+      background-color: #100030;
+    }
+
+    &--light-blue {
+      background-color: #061939;
+    }
+  }
+
+  &__grid {
+    @media screen and (min-width: 768px) {
+      display: grid;
+      grid-template-areas:
+        "image image title title"
+        "image  image description description"
+        "empty empty specification specification"
+        "empty  empty controls controls";
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+
+  &__cost {
+    align-self: flex-end;
+    display: flex;
+    &__pounds {
+      font-size: 2.8em;
+      font-weight: bold;
+    }
+    &__pence {
+      align-self: flex-start;
+      font-size: 2.1em;
+      font-weight: bold;
+    }
+  }
+
+  &__image-container {
+    display: flex;
+    grid-area: image;
+    justify-content: center;
+
+    &__image {
+      max-width: 28em;
+    }
+  }
+
+  &__name-container {
+    padding-top: 4em;
+    margin-top: -4em;
+
+    @media screen and (min-width: 768px) {
+      background-color: transparent;
+      grid-area: title;
+      margin: 0;
+    }
+
+    &__name {
+      font-size: 2.1em;
+      font-weight: bold;
+      margin-bottom: 0.8em;
+    }
+
+    &__quantity {
+      color: #3e5889;
+      font-size: 1.2em;
+    }
+  }
+
+  &__controls {
+    grid-area: controls;
+    &__quantity {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+
+      &__label {
+        color: #3e5889;
+        font-size: 1.2em;
+        text-align: center;
+        margin-bottom: 0.4em;
+      }
+
+      &__buttons {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 10em;
+
+        &__total {
+          font-size: 2.1em;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  &__description {
+    grid-area: description;
+  }
+
+  &__specifications {
+    grid-area: specification;
+    &__items {
+      display: flex;
+
+      &__labels {
+        margin-right: 1.2em;
+      }
+
+      &__values {
+        justify-content: space-evenly;
+      }
+    }
+  }
+}

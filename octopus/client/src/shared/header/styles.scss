@@ -1,0 +1,19 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 14;
+  width: 100%;
+  background: #100030;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem;
+
+    &__logo {
+      width: clamp(14em, 25%, 18em);
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.button {
+  padding: 0.4em 0;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: azure;
+  text-align: center;
+  background: #f050f8;
+  border: 0.2em solid #f050f8;
+  border-radius: 0.4rem;
+  box-shadow: none;
+  transition: all 0.15s linear;
+
+  &__label {
+    font-size: 1.4rem;
+  }
+
+  &--block {
+    margin-top: 0.8em;
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: #ec1ff6;
+    cursor: pointer;
+  }
+}
+
+.quantity-button {
+  background-color: #3e5889;
+  border: 0;
+  border-radius: 0.4rem;
+  width: 30px;
+  height: 30px;
+  color: azure;
+  &:disabled {
+    background-color: #1d2a41;
+    cursor: not-allowed;
+  }
+}
